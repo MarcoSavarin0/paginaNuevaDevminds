@@ -1,0 +1,366 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #070C26;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hamburger-button {
+  display: none;
+}
+
+nav {
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #070C26;
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
+}
+
+.logo-container {
+  width: 70px;
+  height: 70px;
+}
+
+.logo-container img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+li {
+  display: inline;
+  margin: 0 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #F2F2F2;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #69788C;
+  transition: ease-out 0.4s;
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url('./assets/topography.svg');
+}
+
+.contenedor-textoHeader {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 0 20px;
+  margin: 0 20px;
+}
+
+.contenedor-textoHeader h2 {
+  margin: 0;
+}
+
+.contenedor-textoHeader button {
+  width: 100px;
+  background-color: #5F49F2;
+  border: none;
+  padding: 15px;
+  border-radius: 18px;
+  margin: 18px auto;
+}
+
+.contenedor-imagen {
+  width: 50%;
+}
+
+.contenedor-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container-sobreNosotros {
+  height: 100vh;
+}
+
+.sobrenosotros {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.content-sobreNosotros {
+
+  margin: 0 auto;
+  max-width: 800px;
+  background-color: #0b143fc2;
+  padding: 20px;
+  margin: 100px 0;
+  border-radius: 10px;
+}
+
+.background-Section {
+  background-image: url('./assets/plus.svg');
+}
+
+.container-servicios {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 110vh;
+
+}
+
+.main-serviceBox {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 100px 0;
+  padding: 20px;
+}
+
+.service {
+  background-color: #0b143ff3;
+  padding: 20px;
+  margin: 0 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.service h5 {
+  display: none;
+}
+
+.container-imagen-servicio {
+  width: 50%;
+}
+
+.container-imagen-servicio img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service:not(:last-child) {
+  margin-right: 20px;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0b143f54;
+}
+
+.modal-content {
+  background: #0b143ff3;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content button {
+  border: none;
+  background-color: #5F49F2;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+/* Agrega estilos específicos para la tarjeta seleccionada */
+.scroll-parallax.selected {
+  border-color: #ff7f5f00;
+  background-color: #f9f9f900;
+}
+
+/* Estilos para la tarjeta seleccionada cuando está animándose */
+.selected-card {
+  border-color: #ff7f5f00;
+  background-color: #f9f9f900;
+}
+
+
+
+.section-equipo{
+  height: 100vh;
+}
+.main-equipo{
+  /* display: flex;
+  justify-content: center; */
+  margin-top: 150px;
+}
+.content-equipo{
+ 
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 50px;
+  gap: 10px;
+}
+.card-container{
+  cursor:crosshair;
+  width: 400px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 9px;
+}
+.image-background{
+  height: 400px;
+  position: relative;
+  background-size: cover;
+}
+.backgorund-hovercard {
+  background-color: #07338cac;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+  justify-content: flex-end; 
+  padding: 10px; 
+  box-sizing: border-box; 
+  transform: translateY(100%);
+  transition: 0.5s transform ease-in;
+}
+.link-redes {
+  position: absolute;
+  font-size: 20px;
+  top: 10px;
+  right: 10px; 
+}
+.content-card{
+  margin: 0 10px;
+}
+.nombre-card{
+  font-weight: bold;
+  font-size: 25px;
+  margin: 0;
+}
+.edad-card{
+  font-size: 18px;
+  margin: 0;
+}
+.posicion-card{
+  font-size: 20px;
+  margin: 0 0 4px 0;
+  font-weight: bold;
+}
+
+.card-container:hover .backgorund-hovercard {
+  transform: translateY(0);
+}
+
+
+/* Media query para tabletas */
+@media (max-width: 768px) {
+  .main-serviceBox {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 100px auto;
+    padding: 20px;
+    height: 100vh;
+  }
+
+  body.menu-visible {
+    overflow: hidden;
+  }
+
+  nav {
+    padding: 5px;
+    position: relative;
+  }
+
+  .navbar-container.menu-visible {
+    z-index: 1;
+    position: relative;
+  }
+
+  .hamburger-button {
+    display: block;
+    z-index: 2;
+  }
+
+  ul {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .menu {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #69788C;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease;
+    width: 70%;
+    max-width: 300px;
+  }
+
+  .menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 480px) {
+  a {
+    padding: 8px;
+  }
+}
