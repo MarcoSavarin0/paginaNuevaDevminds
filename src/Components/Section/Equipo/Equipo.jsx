@@ -1,7 +1,30 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import { TeamCard } from '../../Cards/TeamCard'
+import { motion, AnimatePresence } from 'framer-motion';
+
 export const Equipo = () => {
+    const [isVisible, setIsVisible] = useState(false);
+    useEffect(() => {
+        const handleScroll = () => {
+            const section = document.getElementById('equipo');
+            if (section) {
+                const rect = section.getBoundingClientRect();
+                setIsVisible(rect.top <= window.innerHeight / 2);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    const containerVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    };
     const team = [
         {
             imageUrl: 'https://pbs.twimg.com/media/F3DJ7YLWQAACFWO.jpg',
@@ -24,12 +47,18 @@ export const Equipo = () => {
         }
     ]
     return (
-        <section className='section-equipo' id='equipo'>
-            <main className='main-equipo'>
-                <div className="content-equipo">
-                    <TeamCard props={team}/>
-                </div>
-            </main>
-        </section>
+            <motion.section
+                className="section-equipo"
+                id='equipo'>
+                <motion.main className={`main-equipo${isVisible ? 'visible' : 'hidden'}`}
+                    variants={containerVariants}
+                    initial='hidden'
+                    animate={isVisible ? 'visible' : 'hidden'}
+                >
+                    <div className="content-equipo">
+                        <TeamCard props={team} isVisible={isVisible} />
+                    </div>
+                </motion.main>
+            </motion.section>
     )
 }

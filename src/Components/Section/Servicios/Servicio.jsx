@@ -18,8 +18,10 @@ export const Servicio = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setIsVisible(true);
+      const serviciosElement = document.getElementById('servicios');
+      if (serviciosElement) {
+        const rect = serviciosElement.getBoundingClientRect();
+        setIsVisible(rect.top <= window.innerHeight / 2);
       }
     };
 
@@ -29,24 +31,27 @@ export const Servicio = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
   };
   return (
-    <motion.section className={`container-servicios ${isVisible ? 'visible' : 'hidden'}`}
-      id='servicios'
-      variants={containerVariants}
-      initial='hidden'
-      animate={isVisible ? 'visible' : 'hidden'}>
-        
-      <main className='main-serviceBox'>
-        <ServiceCard items={serviceItems} isVisible={isVisible} />
-      </main>
-      <div className='container-imagen-servicio'>
-        <img src={imagenServicios} alt="Servicios Imagen" />
-      </div>
-    </motion.section>
+    <>
+     
+      <motion.section className={`container-servicios ${isVisible ? 'visible' : 'hidden'}`}
+        id='servicios'
+        variants={containerVariants}
+        initial='hidden'
+        animate={isVisible ? 'visible' : 'hidden'}>
+
+        <main className='main-serviceBox'>
+
+          <ServiceCard items={serviceItems} isVisible={isVisible} />
+        </main>
+        <div className='container-imagen-servicio'>
+          <img src={imagenServicios} alt="Servicios Imagen" />
+        </div>
+      </motion.section>
+    </>
   );
 };

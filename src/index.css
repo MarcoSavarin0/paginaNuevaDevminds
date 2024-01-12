@@ -74,7 +74,10 @@ header {
   align-items: center;
   background-image: url('./assets/topography.svg');
 }
-
+.titulo-servicio{
+  text-align: center;
+  margin: 10px 0 0 0;
+}
 .contenedor-textoHeader {
   display: flex;
   flex-direction: column;
@@ -219,66 +222,80 @@ header {
 
 
 
-.section-equipo{
+.section-equipo {
+  padding: 100px 0;
   height: 100vh;
 }
-.main-equipo{
+
+.main-equipo {
   /* display: flex;
   justify-content: center; */
   margin-top: 150px;
 }
-.content-equipo{
- 
+
+.content-equipo {
+
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   padding: 50px;
   gap: 10px;
 }
-.card-container{
-  cursor:crosshair;
+
+.card-container {
+  cursor: crosshair;
   width: 400px;
   position: relative;
   overflow: hidden;
   border-radius: 9px;
+  box-shadow: 9px 10px 30px -6px rgba(0, 0, 0, 0.509);
+  -webkit-box-shadow: 9px 10px 30px -6px rgba(0, 0, 0, 0.509);
+  -moz-box-shadow: 9px 10px 30px -6px rgba(0, 0, 0, 0.509);
 }
-.image-background{
+
+.image-background {
   height: 400px;
   position: relative;
   background-size: cover;
 }
+
 .backgorund-hovercard {
   background-color: #07338cac;
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-end; 
-  padding: 10px; 
-  box-sizing: border-box; 
+  justify-content: flex-end;
+  padding: 10px;
+  box-sizing: border-box;
   transform: translateY(100%);
-  transition: 0.5s transform ease-in;
+  transition: 0.3s transform ease-in;
 }
+
 .link-redes {
   position: absolute;
   font-size: 20px;
   top: 10px;
-  right: 10px; 
+  right: 10px;
 }
-.content-card{
+
+.content-card {
   margin: 0 10px;
 }
-.nombre-card{
+
+.nombre-card {
   font-weight: bold;
   font-size: 25px;
   margin: 0;
 }
-.edad-card{
+
+.edad-card {
   font-size: 18px;
   margin: 0;
 }
-.posicion-card{
+
+.posicion-card {
   font-size: 20px;
   margin: 0 0 4px 0;
   font-weight: bold;
