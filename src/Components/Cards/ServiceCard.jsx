@@ -3,16 +3,18 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useAnimation } from 'framer-motion';
-import Modal from './Modal'; // Asegúrate de ajustar la ruta al componente Modal según tu estructura de archivos
+import Modal from './Modal';
 
 const ServiceCard = ({ items, isVisible }) => {
   const [selectedId, setSelectedId] = useState(null);
   const controls = useAnimation();
+
   useEffect(() => {
     if (isVisible) {
       controls.start('visible');
     }
   }, [controls, isVisible]);
+
   const containerVariants = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
@@ -29,6 +31,12 @@ const ServiceCard = ({ items, isVisible }) => {
     hidden: { y: 20, opacity: 0 },
     visible: { y: 0, opacity: 1 },
   };
+
+  const modalContainerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
   return (
     <>
       <motion.div
@@ -38,7 +46,13 @@ const ServiceCard = ({ items, isVisible }) => {
         className="service-container"
       >
         {items.map((item, index) => (
-          <motion.div variants={itemVariants} key={index} layoutId={item.id} onClick={() => setSelectedId(item.id)} className={`scroll-parallax ${selectedId === item.id ? 'selected' : ''}`}>
+          <motion.div
+            variants={itemVariants}
+            key={index}
+            layoutId={item.id}
+            onClick={() => setSelectedId(item.id)}
+            className={`scroll-parallax${selectedId === item.id ? 'selected' : ''}`}
+          >
             <motion.div className="service">
               <motion.h2>{item.title}</motion.h2>
               <motion.h5>{item.subtitle}</motion.h5>
@@ -47,7 +61,14 @@ const ServiceCard = ({ items, isVisible }) => {
         ))}
         <AnimatePresence>
           {selectedId && (
-            <motion.div layoutId={selectedId} className="modal-container">
+            <motion.div
+              className="modal-container"
+              
+              variants={modalContainerVariants}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+            >
               <Modal item={items.find(item => item.id === selectedId)} onClose={() => setSelectedId(null)} />
             </motion.div>
           )}

@@ -2,6 +2,8 @@
 import { Navbar } from './Components/Navbar/Navbar';
 import { Header } from './Components/Header/Header';
 import { Section } from './Components/Section/Section';
+import { Planes } from './Components/Planes/Planes';
+import { Contacto } from './Components/Contacto/Contacto';
 import './App.css'
 
 function App() {
@@ -12,6 +14,8 @@ function App() {
       <div className='background-Section'> 
       <Section />
       </div>
+      <Planes/>
+      <Contacto/>
     </>
   )
 }

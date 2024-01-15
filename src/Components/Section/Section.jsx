@@ -3,6 +3,8 @@ import React from 'react'
 import { SobreNosotros } from './SobreNosotros/SobreNosotros'
 import { Servicio } from './Servicios/Servicio'
 import { Equipo } from './Equipo/Equipo'
+import { Proyectos } from './Proyectos/Proyectos'
+
 export const Section = () => {
   return (
     <>
@@ -11,7 +13,8 @@ export const Section = () => {
         <Servicio />
         <SobreNosotros />
         <Equipo />
-
+        <Proyectos />
+        
       </div>
 
     </>
