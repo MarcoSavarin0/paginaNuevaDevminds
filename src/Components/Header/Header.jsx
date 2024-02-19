@@ -21,9 +21,8 @@ export const Header = () => {
           duration: 2,
         }}
         className='contenedor-textoHeader'>
-        <h1>A DIGITAL AGENCY</h1>
-        <h2>& Solution</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam officia sit consequatur, distinctio neque ipsam. Numquam nobis eligendi asperiores rerum sed soluta provident. Reprehenderit reiciendis eveniet id vel consectetur quo.</p>
+        <h1>Somos DevMinds</h1>
+        <h3>Compania Desarrolladora de Software</h3>
         <motion.button whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>Contact Us</motion.button>
       </motion.div>
       <motion.div

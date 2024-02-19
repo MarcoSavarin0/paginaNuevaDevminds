@@ -4,18 +4,17 @@ import { Header } from './Components/Header/Header';
 import { Section } from './Components/Section/Section';
 import { Planes } from './Components/Planes/Planes';
 import { Contacto } from './Components/Contacto/Contacto';
-import './App.css'
 
 function App() {
   return (
     <>
       <Navbar />
       <Header />
-      <div className='background-Section'> 
-      <Section />
+      <div className='background-Section'>
+        <Section />
       </div>
-      <Planes/>
-      <Contacto/>
+      <Planes />
+      <Contacto />
     </>
   )
 }
