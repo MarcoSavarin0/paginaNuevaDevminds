@@ -5,6 +5,8 @@ import ServiceCard from '../../Cards/ServiceCard';
 import imagenServicios from '../../../assets/5.png'
 import { motion } from 'framer-motion';
 import ServicioTexto from '../../Texto/Servicio/Servicio';
+
+
 export const Servicio = () => {
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
@@ -28,7 +30,7 @@ export const Servicio = () => {
   };
   return (
     <>
-     
+
       <motion.section className={`container-servicios ${isVisible ? 'visible' : 'hidden'}`}
         id='servicios'
         variants={containerVariants}

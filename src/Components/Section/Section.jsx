@@ -14,7 +14,7 @@ export const Section = () => {
         <SobreNosotros />
         <Equipo />
         <Proyectos />
-        
+
       </div>
 
     </>
