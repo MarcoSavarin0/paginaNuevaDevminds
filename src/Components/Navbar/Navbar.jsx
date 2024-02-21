@@ -27,7 +27,7 @@ export const Navbar = () => {
           }
         }}
         className="logo-container">
-      <Link to='header' alt='inicio' smooth={true} duration={500} > <img src={Logo} alt="Logo Devminds" /></Link> 
+        <Link to='header' alt='inicio' smooth={true} duration={500} > <img src={Logo} alt="Logo Devminds" /></Link>
       </motion.div>
       <motion.ul
         initial={{ opacity: 0, scale: 0.5 }}
@@ -46,7 +46,7 @@ export const Navbar = () => {
         <li><Link alt='Equipo' to="equipo" smooth={true} duration={500}>Equipo</Link></li>
         <li><Link alt='Proyectos' to="proyectos" smooth={true} duration={500}>Proyectos</Link ></li>
         <li><Link alt='Contacto' to="planes" smooth={true} duration={500}>Planes</Link></li>
-        <li><Link alt='Contacto' to="#contacto" smooth={true} duration={500}>Contacto</Link></li>
+        <li><Link alt='Contacto' to="contact" smooth={true} duration={500}>Contacto</Link></li>
 
       </motion.ul>
       <div className='hamburger-button' onClick={toggleMenu}>
