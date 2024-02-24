@@ -11,7 +11,6 @@ export const Section = () => {
       <div style={{ display: 'flex', flexDirection: 'column' }}>
 
         <Servicio />
-        <SobreNosotros />
         <Equipo />
         <Proyectos />
 

@@ -42,7 +42,7 @@ export const Navbar = () => {
           <i className='fa-solid fa-times'></i>
         </div>
         <li><Link alt='Servicios' to="servicios" smooth={true} duration={500} >Servicios</Link></li>
-        <li><Link alt='Sobre Nosotros' to='sobreNosotros' smooth={true} duration={500}>Sobre Nosotros</Link ></li>
+        {/* <li><Link alt='Sobre Nosotros' to='sobreNosotros' smooth={true} duration={500}>Sobre Nosotros</Link ></li> */}
         <li><Link alt='Equipo' to="equipo" smooth={true} duration={500}>Equipo</Link></li>
         <li><Link alt='Proyectos' to="proyectos" smooth={true} duration={500}>Proyectos</Link ></li>
         <li><Link alt='Contacto' to="planes" smooth={true} duration={500}>Planes</Link></li>
